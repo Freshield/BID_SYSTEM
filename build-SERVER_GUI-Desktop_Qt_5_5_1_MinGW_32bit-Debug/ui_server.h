@@ -17,6 +17,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -27,6 +28,8 @@ class Ui_SERVER
 public:
     QWidget *centralWidget;
     QLabel *label;
+    QPushButton *Button1;
+    QPushButton *Button2;
     QMenuBar *menuBar;
     QStatusBar *statusBar;
 
@@ -34,7 +37,7 @@ public:
     {
         if (SERVER->objectName().isEmpty())
             SERVER->setObjectName(QStringLiteral("SERVER"));
-        SERVER->resize(698, 512);
+        SERVER->resize(802, 511);
         centralWidget = new QWidget(SERVER);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         label = new QLabel(centralWidget);
@@ -42,10 +45,16 @@ public:
         label->setGeometry(QRect(60, 20, 531, 301));
         label->setFrameShape(QFrame::Panel);
         label->setFrameShadow(QFrame::Sunken);
+        Button1 = new QPushButton(centralWidget);
+        Button1->setObjectName(QStringLiteral("Button1"));
+        Button1->setGeometry(QRect(620, 20, 141, 51));
+        Button2 = new QPushButton(centralWidget);
+        Button2->setObjectName(QStringLiteral("Button2"));
+        Button2->setGeometry(QRect(620, 110, 141, 51));
         SERVER->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(SERVER);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 698, 30));
+        menuBar->setGeometry(QRect(0, 0, 802, 30));
         SERVER->setMenuBar(menuBar);
         statusBar = new QStatusBar(SERVER);
         statusBar->setObjectName(QStringLiteral("statusBar"));
@@ -60,6 +69,8 @@ public:
     {
         SERVER->setWindowTitle(QApplication::translate("SERVER", "SERVER", 0));
         label->setText(QString());
+        Button1->setText(QApplication::translate("SERVER", "1", 0));
+        Button2->setText(QApplication::translate("SERVER", "2", 0));
     } // retranslateUi
 
 };

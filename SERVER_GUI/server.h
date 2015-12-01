@@ -15,6 +15,9 @@ public:
     explicit SERVER(QWidget *parent = 0);
     ~SERVER();
 
+private slots:
+    void on_Button1_clicked();
+
 private:
     Ui::SERVER *ui;
 };

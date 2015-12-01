@@ -9,6 +9,45 @@
 #pragma comment (lib, "ws2_32")
 using namespace std;
 
+
+SOCKET sockClient;//client socket
+vector <SOCKET> clientSocketGroup;//socket pool
+int rev = 0;
+int button = 0;
+SOCKET sockSrv;
+int client_count = 0;
+HANDLE bufferMutex;//Semaphore
+int uid_number = 100;
+int item_number = 8;
+int item_vector_num = 0;
+//---------------UID-----------------------//
+struct UID
+{
+    int number;
+    SOCKET sockets_value;
+    int registed = 0;
+
+};
+
+vector<UID> uid;
+
+//---------------/UID-----------------------//
+
+//---------------ITEM-----------------------//
+struct ITEM
+{
+    string name;
+    string price = "NULL";
+    string owner = "NULL";
+    string buyer = "NULL";
+    int itemcode = 0;
+    int show = 0;
+
+};
+
+vector<ITEM> item;
+
+
 SERVER::SERVER(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::SERVER)
@@ -19,4 +58,9 @@ SERVER::SERVER(QWidget *parent) :
 SERVER::~SERVER()
 {
     delete ui;
+}
+
+void SERVER::on_Button1_clicked()
+{
+
 }
