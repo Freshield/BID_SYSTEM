@@ -53,6 +53,21 @@ SERVER::SERVER(QWidget *parent) :
     ui(new Ui::SERVER)
 {
     ui->setupUi(this);
+    //----------------load socket dll-----------------------//
+
+        WORD wVersionRequested;
+        WSADATA wsaData;
+        wVersionRequested = MAKEWORD(2, 2);
+
+        //find error
+        int err = WSAStartup(wVersionRequested, &wsaData);
+        if (err != 0)
+        {
+            ui->label->setText("WSAStartup error");
+
+        }
+        ui->label->setText("WSAStartup finished");
+
 }
 
 SERVER::~SERVER()

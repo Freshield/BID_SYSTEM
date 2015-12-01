@@ -17,7 +17,7 @@ CXXFLAGS      = -pipe -fno-keep-inline-dllexport -g -frtti -Wall -Wextra -fexcep
 INCPATH       = -I..\SERVER_GUI -I. -IC:\Qt\Qt5.5.1\5.5\mingw492_32\include -IC:\Qt\Qt5.5.1\5.5\mingw492_32\include\QtWidgets -IC:\Qt\Qt5.5.1\5.5\mingw492_32\include\QtGui -IC:\Qt\Qt5.5.1\5.5\mingw492_32\include\QtANGLE -IC:\Qt\Qt5.5.1\5.5\mingw492_32\include\QtCore -Idebug -I. -IC:\Qt\Qt5.5.1\5.5\mingw492_32\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
-LIBS        =        -lmingw32 -LC:/Qt/Qt5.5.1/5.5/mingw492_32/lib -lqtmaind -lshell32 -L C:\WS2_32.LIB -lQt5Widgetsd -lQt5Guid -lQt5Cored 
+LIBS        =        -lmingw32 -LC:/Qt/Qt5.5.1/5.5/mingw492_32/lib -lqtmaind -lshell32 -lws2_32 -lQt5Widgetsd -lQt5Guid -lQt5Cored 
 QMAKE         = C:\Qt\Qt5.5.1\5.5\mingw492_32\bin\qmake.exe
 IDC           = idc
 IDL           = midl
@@ -493,6 +493,9 @@ debug/server.o: ../SERVER_GUI/server.cpp ../SERVER_GUI/server.h \
 		C:/Qt/Qt5.5.1/5.5/mingw492_32/include/QtWidgets/QMenuBar \
 		C:/Qt/Qt5.5.1/5.5/mingw492_32/include/QtWidgets/qmenubar.h \
 		C:/Qt/Qt5.5.1/5.5/mingw492_32/include/QtWidgets/qmenu.h \
+		C:/Qt/Qt5.5.1/5.5/mingw492_32/include/QtWidgets/QPushButton \
+		C:/Qt/Qt5.5.1/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/Qt5.5.1/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/Qt5.5.1/5.5/mingw492_32/include/QtWidgets/QStatusBar \
 		C:/Qt/Qt5.5.1/5.5/mingw492_32/include/QtWidgets/qstatusbar.h \
 		C:/Qt/Qt5.5.1/5.5/mingw492_32/include/QtWidgets/QWidget \

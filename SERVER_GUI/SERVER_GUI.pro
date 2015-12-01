@@ -19,4 +19,5 @@ HEADERS  += server.h
 
 FORMS    += server.ui
 
-LIBS += -L C:\WS2_32.LIB
+LIBS += -lws2_32
+
