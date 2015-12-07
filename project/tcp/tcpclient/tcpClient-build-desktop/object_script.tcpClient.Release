@@ -1,0 +1,15 @@
+INPUT(
+./release\main.o
+./release\client.o
+./release\submitdialog.o
+./release\seeallbiddialog.o
+./release\biditemdialog.o
+./release\bidpricedialog.o
+./release\withdrawitemdialog.o
+./release\moc_client.o
+./release\moc_submitdialog.o
+./release\moc_seeallbiddialog.o
+./release\moc_biditemdialog.o
+./release\moc_bidpricedialog.o
+./release\moc_withdrawitemdialog.o
+);
